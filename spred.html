@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function calculatedepth(value) {
+    return Array.isArray(value) ? 
+      1 + Math.max(...value.map(calculatedepth)) :
+      0;
+  }
+
+var arry = [1, [2, [7, 4]]] ;
+console.log(...arry);
+document.write(calculatedepth(arry));
+</script>
+</body>
+</html>
